@@ -1,0 +1,31 @@
+use social_media;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50),
+  profile VARCHAR(50),
+  password VARCHAR(50),
+  headline VARCHAR(100),
+  token VARCHAR(500)
+);
+
+CREATE TABLE post (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  profile VARCHAR(50),
+  content VARCHAR(5000),
+  likes INT,
+  shares INT
+);
+
+
+
+INSERT INTO users (name, profile, password, headline, token)
+VALUES
+  ('daya', 'dayakar_mahadevan', '1234abc', 'learner', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'),
+  ('prakash', 'prakash_mahadevan', 'abc@1234', 'teacher', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE6MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
+
+
+INSERT INTO posts (profile, content, likes, shares)
+VALUES 
+  ('vamsi_bhavani', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis diam in dolor venenatis, eget tempus justo bibendum. Quisque finibus, mauris quis rutrum efficitur, purus quam pellentesque leo, sed imperdiet massa elit aliquam neque. Nunc vestibulum malesuada erat, nec pretium mauris consectetur et. Nunc fermentum convallis justo, rutrum posuere elit molestie nec. Cras a sem sed arcu faucibus sagittis. Praesent ut egestas sapien, quis venenatis nulla', 3, 5),
+  ('entri_telugu', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis diam in dolor venenatis, eget tempus justo bibendum. Quisque finibus, mauris quis rutrum efficitur, purus quam pellentesque leo, sed imperdiet massa elit aliquam neque. Nunc vestibulum malesuada erat, nec pretium mauris consectetur et. Nunc fermentum convallis justo, rutrum posuere elit molestie nec. Cras a sem sed arcu faucibus sagittis. Praesent ut egestas sapien, quis venenatis nulla', 5, 3);
